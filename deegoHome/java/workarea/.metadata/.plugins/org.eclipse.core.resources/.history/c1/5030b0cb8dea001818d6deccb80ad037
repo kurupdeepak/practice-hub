@@ -1,0 +1,7 @@
+package com.kurup.loyalityapp.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface StoreRepository extends CrudRepository<StoreModel,Integer>{
+
+}

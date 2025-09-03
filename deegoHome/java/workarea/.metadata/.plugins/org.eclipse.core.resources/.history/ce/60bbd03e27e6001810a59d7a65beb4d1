@@ -1,0 +1,45 @@
+package com.test.application.review;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.test.application.review.model.CustomerProductReview;
+import com.test.application.review.service.ReviewService;
+
+@RestController
+@RequestMapping("/review")
+public class ReviewRestController {
+
+	@Autowired
+	ReviewService reviewService;
+
+	@RequestMapping("/create")
+	public ResponseEntity<Object> createReview(CustomerProductReview review) {
+		try {
+			boolean status = reviewService.addCustomerReview(review);
+			return ResponseEntity.ok().build();
+		} catch (ReviewException e) {
+		
+		}
+	}
+
+	@RequestMapping("/ratings")
+	public List<CustomerProductReview> getProductsRating(@RequestParam("product") int product, 
+			@RequestParam("min") int min,@RequestParam("max") int max) throws ReviewException {
+		return reviewService.findProductsWithRatingInRange(product, min, max);
+	}
+	
+	@RequestMapping("/ratings/{product}/{min}/{max}")
+	public List<CustomerProductReview> getProductsRatingByPath(@PathVariable int product, 
+			@PathVariable("min") int min,@PathVariable("max") int max) throws ReviewException {
+		return reviewService.findProductsWithRatingInRange(product, min, max);
+	}
+
+}

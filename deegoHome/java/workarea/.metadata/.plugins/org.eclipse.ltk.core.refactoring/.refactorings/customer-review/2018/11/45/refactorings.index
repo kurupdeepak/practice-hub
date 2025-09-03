@@ -1,0 +1,42 @@
+1541737828187	Rename package 'com.test.customer.review.model'
+1541737990715	Rename package 'com.test.customer.review'
+1541738070171	Move compilation unit
+1541738364578	Rename type 'InvalidReviewException'
+1541738530401	Move compilation unit
+1541738883320	Rename method 'validateReview'
+1541740371951	Rename package 'com.test.customer.model'
+1541740401441	Move compilation unit
+1541740445061	Delete element
+1541740593269	Move compilation unit
+1541740961778	Rename method 'getProduct'
+1541741722476	Rename field 'range'
+1541741869994	Rename method 'checkLanguage'
+1541742041229	Delete element
+1541742862997	Move compilation unit
+1541742867982	Delete element
+1541742885730	Rename package 'com.test.review'
+1541742895567	Delete element
+1541773892946	Move compilation unit
+1541773937409	Move compilation unit
+1541773953438	Move compilation unit
+1541774053147	Move compilation unit
+1541774078419	Move compilation unit
+1541774115472	Rename package 'com.test.customer.review'
+1541774134326	Rename package 'com.test.review.dao.impl'
+1541774151663	Rename package 'com.test.review.model'
+1541774161478	Rename package 'com.test.review.dao'
+1541774233434	Move compilation unit
+1541775864648	Rename package 'test.review.dao.impl'
+1541775873822	Rename package 'test.review.dao'
+1541775883567	Rename package 'test.review.model'
+1541776192401	Rename field 'reviewDAO'
+1541777377761	Move compilation unit
+1541777406977	Move compilation units
+1541777422984	Move compilation units
+1541777442543	Move compilation units
+1541777460814	Move compilation unit
+1541777473012	Move compilation unit
+1541777488642	Move compilation unit
+1541777530142	Move compilation unit
+1541777614116	Move compilation unit
+1541777666689	Move files

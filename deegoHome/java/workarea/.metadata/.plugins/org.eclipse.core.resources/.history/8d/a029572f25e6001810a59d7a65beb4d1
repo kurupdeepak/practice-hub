@@ -1,0 +1,22 @@
+package com.test.application.review;
+
+public class ApplicationError {
+	String statusCode;
+	String message;
+	String error;
+
+	static ApplicationError buildStatus(String code, String message) {
+		ApplicationError status = new ApplicationError();
+		status.statusCode = code;
+		status.message = message;
+		return status;
+	}
+
+	static ApplicationError buildStatus(String code, String message, String error) {
+		ApplicationError status = new ApplicationError();
+		status.statusCode = code;
+		status.message = message;
+		status.error = error;
+		return status;
+	}
+}

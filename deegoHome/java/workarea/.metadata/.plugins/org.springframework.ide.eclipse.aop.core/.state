@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="com.practice.springboot.web"/>
+<aop-project name="jpa"/>
+<aop-project name="simplejpa"/>
+<aop-project name="customer-review-main"/>
+<aop-project name="customerreviewserver"/>
+<aop-project name="loyalityapp"/>
+</aop-reference-model>

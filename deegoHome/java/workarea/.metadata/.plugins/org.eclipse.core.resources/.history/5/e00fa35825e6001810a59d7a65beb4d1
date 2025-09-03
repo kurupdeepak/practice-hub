@@ -1,0 +1,9 @@
+package com.test.application.review;
+
+public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
+
+	public ResponseExceptionHandler() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

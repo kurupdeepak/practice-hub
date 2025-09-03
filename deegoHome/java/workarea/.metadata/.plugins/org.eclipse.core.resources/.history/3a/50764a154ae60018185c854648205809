@@ -1,0 +1,7 @@
+insert into users(id,name) values(1,"John");
+insert into users(id,name) values(2,"Mike");
+
+insert into products(id,name) values (1,"Git-userhandbook");
+insert into products(id,name) values (2,"Java for dummies");
+insert into products(id,name) values (3,"Springboot");
+commit;

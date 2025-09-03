@@ -1,0 +1,115 @@
+package test;
+
+import java.util.Arrays;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    	LocalStack<Integer> stack = new LocalStack<Integer>();
+    	System.out.println(stack.isEmpty());
+    	for(int i = 0 ; i < LocalStack.INITIAL_SIZE + 5 ; i++) {
+    		stack.push(i);
+    		System.out.println("Pushed =" + i + ", size = " + stack.size());
+    	}
+    	
+    	for(int i = 0 ; i < LocalStack.INITIAL_SIZE ; i++) {
+    		System.out.println("Pop =" + stack.pop()+ ", size = " + stack.size());
+    	}
+    	System.out.println("Is stack empty = " + stack.isEmpty());
+    }
+    
+}
+
+/* Define your class here */
+/**
+ * A simple class representing the Stack with the operations.
+ * @author Deepak
+ *
+ */
+class LocalStack<T> {
+	/**
+	 * Constant to define the initial size of the element array
+	 */
+	static final int INITIAL_SIZE = 10;
+	/**
+	 * Array to store the element.
+	 */
+	Object [] elements = new Object[INITIAL_SIZE];
+	
+	int top = -1;
+	
+	int size;
+	
+	LocalStack(int initialSize){
+		elements = new Object[initialSize];
+	}
+	
+	public LocalStack() {
+		// TODO Auto-generated constructor stub
+	}
+
+	void push(T o) {
+		if(++top >= elements.length) {
+			addSize();
+		}
+		elements[top] = o;
+		size++;
+	}
+	
+	void addSize(){
+		int size = elements.length + INITIAL_SIZE;
+		elements = Arrays.copyOf(elements, size);
+	}
+	
+	@SuppressWarnings("unchecked")
+	T pop() {
+		if(isEmpty())
+			throw new StackEmptyException("Stack is empty" + top);
+		size--;
+		return (T) elements[top--];
+	}
+	
+	int size() {
+		return size;
+	}
+	
+	boolean isEmpty() {
+		return top < 0 || size == 0;
+	}
+
+	@Override
+	public String toString() {
+		return "LocalStack [elements=" + Arrays.toString(elements) + ", top=" + top + "]";
+	}
+	
+	
+}
+
+class StackEmptyException extends RuntimeException{
+
+	public StackEmptyException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

@@ -1,0 +1,38 @@
+package com.kurup.loyalityapp.model;
+
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pointcards")
+public class PointCard {
+	int cardNumber;
+	
+	Customer customer;
+	
+	long points;
+
+	public int getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(int cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public long getPoints() {
+		return points;
+	}
+
+	public void setPoints(long points) {
+		this.points = points;
+	}
+	
+}

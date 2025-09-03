@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.services;
+
+public class PointCardNumberGenerator {
+
+	public PointCardNumberGenerator() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

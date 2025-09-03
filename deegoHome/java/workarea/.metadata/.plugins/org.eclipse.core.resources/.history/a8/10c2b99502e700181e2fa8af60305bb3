@@ -1,0 +1,40 @@
+package test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution1 {
+
+	public Solution1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		System.out.println("1 =" + common("Hello", "Hell"));
+		System.out.println("2 =" + common("Hello World", "HoW"));
+	}
+
+	// Complete the common function below.
+	// Assumption
+	static String common(String str1, String str2) {
+		StringBuffer buf = new StringBuffer();
+		Set set = new HashSet();
+		if (str1.length() > str2.length()) {
+			for (int i = 0; i < str2.length(); i++) {
+				for (int j = 0; j < str1.length(); j++) {
+					if (str1.charAt(j) == str2.charAt(i) && buf.indexOf(String.valueOf(str1.charAt(j) == -1))
+						buf.append(str1.charAt(j));
+				}
+			}
+		}else {
+			for (int i = 0; i < str1.length(); i++) {
+				for (int j = 0; j < str2.length(); j++) {
+					if (str2.charAt(j) == str1.charAt(i))
+						buf.append(str1.charAt(j));
+				}
+			}
+		}
+		return buf.toString();
+	}
+
+}

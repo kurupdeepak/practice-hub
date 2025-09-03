@@ -1,0 +1,35 @@
+package test;
+
+public class Solution1 {
+
+	public Solution1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	// Complete the common function below.
+	//Assumption 
+    static String common(String str1, String str2) {
+    	char [] ch1,ch2,res ;
+    	
+    	if(str1.length() > str2.length()) {
+    		ch1 = str1.toCharArray();
+    		ch2 = str2.toCharArray();
+    	}else {
+    		ch1 = str1.toCharArray();
+    		ch2 = str2.toCharArray();
+    	}
+    	
+    	return null;
+
+    }
+    
+    void rem(char [] ch){
+    	
+    }
+
+}

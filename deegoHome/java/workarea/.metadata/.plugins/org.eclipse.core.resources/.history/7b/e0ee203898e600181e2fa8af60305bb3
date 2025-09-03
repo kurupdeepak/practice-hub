@@ -1,0 +1,6 @@
+logging.level.org.springframework = DEBUG
+logging.level.org.hibernate=DEBUG
+spring.jpa.show-sql=true
+spring.datasource.initialization-mode=always
+#words not allowed
+ca.homedepot.customerreview.curseWords=Ship,Miss,Duck,Punt,Rooster,Mother,Bits

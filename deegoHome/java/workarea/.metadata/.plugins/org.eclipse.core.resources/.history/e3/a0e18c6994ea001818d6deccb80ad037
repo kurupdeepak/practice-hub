@@ -1,0 +1,58 @@
+package com.kurup.loyalityapp.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.kurup.loyalityapp.model.PointCardModel;
+import com.kurup.loyalityapp.model.UserModel;
+import com.kurup.loyalityapp.repository.PointsCardRepository;
+import com.kurup.loyalityapp.repository.UserRepository;
+
+@Service
+public class LoyalityAppService {
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired 
+	PointsCardRepository pointCardRepository;
+	
+	@Autowired
+	PointCardNumberGenerator pointCardNumberGenerator;
+	
+	public void addCard(UserModel user) {
+		PointCardModel pointCard = new PointCardModel();
+		pointCard.setUser(user);
+		pointCard.setStatus(CardStatus.ACTIVE.getState());
+		pointCard.setCardNumber(pointCardNumberGenerator.generateNumber());
+		pointCardRepository.save(pointCard);
+	}
+	
+	public void cancelCard(PointCardModel pointCard) {
+		pointCard.setStatus(CardStatus.CANCELLED.getState());
+		pointCardRepository.save(pointCard);
+	}
+	
+	public void updatePoints(PointCardModel pointCard,long newPoints) {
+		pointCard.setPoints(pointCard.getPoints() + newPoints);
+		pointCardRepository.save(pointCard);
+	}
+
+	public List<UserModel> getUsers(){
+		Iterable<UserModel> results = userRepository.findAll();
+		
+	}
+	
+	public List<PointCardModel> getCards(UserModel user){
+		return pointCardRepository.findCardsForUser(user.getUserId());
+	}
+
+	public UserModel getUser(int userId) {
+		Optional<UserModel> user = userRepository.findById(userId);
+		return user.get();
+	}
+	
+}

@@ -1,0 +1,48 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+
+
+/* Define your class here */
+interface AbstractStack<T>{
+    T pop();
+    void push(T e);
+    T size();
+    boolean isEmpty();
+}
+class StackArrayBased<T> implements AbstractStack{
+    T [] elements ;
+
+	@Override
+	public Object pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void push(Object e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object size() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+    
+}

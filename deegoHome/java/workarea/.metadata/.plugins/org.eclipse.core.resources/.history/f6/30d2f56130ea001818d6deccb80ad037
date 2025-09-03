@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.kurup.loyalityapp.model.PointCard;
+
+public interface PointsCardRepository extends CrudRepository<PointCard,Integer>{
+
+}

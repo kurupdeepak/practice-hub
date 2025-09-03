@@ -1,0 +1,32 @@
+package ca.homedepot.customerreview.util;
+
+import com.google.common.base.Preconditions;
+
+import ca.homedepot.customerreview.exception.LangaugeNotAllowedException;
+import ca.homedepot.customerreview.exception.RatingNotValidException;
+
+public class ServicesUtil {
+	private static void validateParameterNotNull(Object parameter, String nullMessage) {
+		Preconditions.checkArgument(parameter != null, nullMessage);
+	}
+
+	public static void validateParameterNotNullStandardMessage(String param, Object value) {
+		validateParameterNotNull(value, "Parameter " + param + " cannot be null");
+	}
+
+	public static boolean validateNonCurseWordsStandardMessage(String curseWords, String comments) {
+		String a[] = curseWords.split(",");
+		for (String w : a) {
+			if (comments.contains(w)) {
+				throw new LangaugeNotAllowedException(w + " not allowed in comments");
+			}
+		}
+		return true;
+	}
+
+	public static boolean validateNonNegativeRating(Double rating) {
+		if (rating < 0)
+			throw new RatingNotValidException(rating);
+		return true;
+	}
+}

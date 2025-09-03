@@ -1,0 +1,9 @@
+package com.test.application.review.service;
+
+public class ApplicationError {
+
+	public ApplicationError() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.kurup.loyalityapp.model;
+
+public class StoreModel {
+
+	private int storeId;
+	
+}

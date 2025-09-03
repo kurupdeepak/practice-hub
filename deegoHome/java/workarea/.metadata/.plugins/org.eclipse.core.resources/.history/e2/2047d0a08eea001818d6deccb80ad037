@@ -1,0 +1,15 @@
+package com.kurup.loyalityapp.services;
+
+public class PointCardNumberGenerator {
+	private static final String groupA = "4352";
+	private static final String groupB = "6789";
+	private static final String groupC = "4562";
+	
+	private static int seq;
+	
+	private int customerNumber = 1000;
+	
+	String generateNumber() {
+		return ;
+	}
+}

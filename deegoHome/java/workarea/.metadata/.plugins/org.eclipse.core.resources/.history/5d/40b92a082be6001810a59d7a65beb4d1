@@ -1,0 +1,23 @@
+package com.test.application.review;
+
+import java.util.Date;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+@ControllerAdvice
+@RestController
+public class CustomerReviewExceptionHandler extends ResponseEntityExceptionHandler {
+
+	 @ExceptionHandler(CreateReviewFailedException.class)
+	 public final ResponseEntity<ApplicationError> handleException(CreateReviewFailedException ex, WebRequest request) {
+	    ApplicationError errorDetails = new ApplicationError(ex.getMessage(),request.getDescription(false));
+	    errorDetails.setCode(HttpStatus.BAD_REQUEST.value());
+	    return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+	 }
+}

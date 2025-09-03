@@ -1,0 +1,41 @@
+package com.test.application.review;
+
+public class ApplicationError {
+	String message;
+	String error;
+
+	ApplicationError(String message) {
+		this.message = message;
+	}
+
+	ApplicationError(String message, String error) {
+		this.message = message;
+		this.error = error;
+	}
+
+	public String getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getError() {
+		return error;
+	}
+
+	public void setError(String error) {
+		this.error = error;
+	}
+	
+	
+}

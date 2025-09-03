@@ -1,0 +1,18 @@
+1541897290208	Rename type 'ReviewValidator'
+1541897365282	Delete element
+1541898608556	Rename field 'langRepository'
+1541899566544	Delete element
+1541902001035	Rename type 'CustomerProductReview'
+1541902016413	Rename type 'Review'
+1541903985735	Delete element
+1541907741302	Delete element
+1541907764610	Move 4 resources to 'review'
+1541910248770	Extract interface 'IReviewService'
+1541910259866	Rename type 'ReviewService'
+1541910264529	Rename type 'IReviewService'
+1541910478179	Rename method 'addReview'
+1541955595235	Rename type 'Status'
+1541990788355	Rename type 'ResponseStatus'
+1541991730270	Rename type 'ResponseExceptionHandler'
+1541991893270	Rename type 'ReviewException'
+1541992815819	Rename type 'ReviewException'

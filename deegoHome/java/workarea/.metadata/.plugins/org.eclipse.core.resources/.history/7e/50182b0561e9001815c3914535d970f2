@@ -1,0 +1,5 @@
+package com.kurup.loyalityapp.repository;
+
+public interface PointsCardRepository extends CrudRepository<PointCard,Integer>{
+
+}

@@ -1,0 +1,42 @@
+package test;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Solution2 {
+	private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        Scanner in = new Scanner(System.in);
+        final String fileName = System.getenv("OUTPUT_PATH");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+        
+        String line1 = in.nextLine().trim();
+        String[] wordsArray = line1.split(",");
+        List<String> wordList = new ArrayList<String>();
+        for(String item : wordsArray) {
+            wordList.add(item.trim());
+        }
+        
+        String res = firstUnique(wordList);
+
+        bw.write(res);
+        bw.newLine();
+        bw.close();
+        in.close();
+    }
+
+    static String firstUnique(List<String> words) {
+        Set<String> wordsSet = Collections.unmodifiableSet();
+         
+     }
+    
+    
+}
+	

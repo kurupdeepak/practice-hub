@@ -1,0 +1,13 @@
+package assignments.coding;
+
+public class SubsetFinder {
+
+	public static findSubset(int [] a) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

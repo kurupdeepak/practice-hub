@@ -1,0 +1,85 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+
+
+/* Define your class here */
+interface AbstractStack{
+    int pop();
+    void push(int e);
+    int size();
+    boolean isEmpty();
+}
+
+class StackArrayBased implements AbstractStack{
+    int [] elements ;
+    
+    int top;
+    
+    StackArrayBased(int initialCapacity){
+    	elements = new int[initialCapacity];
+    }
+    
+	@Override
+	public int pop() {
+		if(top < 0)
+			throw new StackOperationFailedException("Stack is empty");
+		return elements[top--];
+	}
+
+	@Override
+	public void push(int e) {
+		if(top >= elements.length)
+			throw new StackOperationFailedException("Stack is full");
+		elements[top++] = e;
+	}
+
+	@Override
+	public int size() {
+		return top;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return top == 0;
+	}
+    
+}
+
+class StackOperationFailedException extends RuntimeException{
+
+	public StackOperationFailedException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

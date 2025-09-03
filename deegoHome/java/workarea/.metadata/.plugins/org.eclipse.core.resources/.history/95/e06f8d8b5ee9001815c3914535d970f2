@@ -1,0 +1,12 @@
+package com.kurup.loyalitypoints;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CustomerReviewMain1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CustomerReviewMain1Application.class, args);
+	}
+}

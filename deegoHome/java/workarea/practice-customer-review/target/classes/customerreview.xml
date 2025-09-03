@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
+		   
+	<bean id="customerReviewService" class="com.test.application.customerreview.DefaultCustomerReviewServiceImpl">
+		<property name="customerReviewDao" ref="customerReviewDao"/>
+		<property name="languageDAO" ref="languageDAO"/>
+	</bean>
+
+	<bean id="customerReviewDao" class="com.test.application.customerreview.dao.CustomerReviewDAO"/>
+
+	<bean id="languageDAO" class="com.test.application.customerreview.dao.LanguageDAO"/>
+	
+	<bean id="productDAO" class="com.test.application.product.dao.ProductDAO"/>
+	
+</beans>

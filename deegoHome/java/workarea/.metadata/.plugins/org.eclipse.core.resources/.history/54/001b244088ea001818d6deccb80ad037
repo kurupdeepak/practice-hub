@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.model;
+
+public class StoreModel {
+
+	public StoreModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

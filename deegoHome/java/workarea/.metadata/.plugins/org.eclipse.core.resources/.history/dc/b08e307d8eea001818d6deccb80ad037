@@ -1,0 +1,11 @@
+package com.kurup.loyalityapp.services;
+
+public class PointCardNumberGenerator {
+	private static final String groupA;
+	private static final String groupB;
+	private static final String groupC;
+	
+	String generateNumber() {
+		return "";
+	}
+}

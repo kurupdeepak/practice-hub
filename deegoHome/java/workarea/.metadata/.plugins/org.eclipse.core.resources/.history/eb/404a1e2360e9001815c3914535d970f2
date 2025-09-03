@@ -1,0 +1,10 @@
+package com.kurup.loyalityapp.model;
+
+public class CustomerPoints {
+	
+	int customerId;
+	
+	int points;
+
+
+}

@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.controller;
+
+public class AppError {
+
+	public AppError() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

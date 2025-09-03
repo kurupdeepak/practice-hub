@@ -1,0 +1,42 @@
+package test;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+/* Define your class here */
+interface AbstractStack<T>{
+    T pop();
+    void push(T e);
+    T size();
+    boolean isEmpty();
+}
+class MyIntStack<T> implements AbstractStack<T>{
+	private List<T> elements = new ArrayList<T>(); 
+	@Override
+	public T pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void push(T e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public T size() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}

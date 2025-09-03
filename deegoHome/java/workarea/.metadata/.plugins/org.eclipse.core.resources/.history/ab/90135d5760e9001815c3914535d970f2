@@ -1,0 +1,26 @@
+package com.kurup.loyalityapp.model;
+
+public class CustomerPoints {
+	
+	int customerId;
+	
+	int points;
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	
+}

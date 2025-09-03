@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.util;
+
+import org.glassfish.jersey.internal.guava.Preconditions;
+
+public class ServiceUtil {
+	private static void validateParameterNotNull(Object parameter, String nullMessage) {
+		Preconditions.checkArgument(parameter != null, nullMessage);
+	}
+}

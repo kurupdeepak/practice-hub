@@ -1,0 +1,68 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+/* Define your class here */
+interface AbstractStack<T>{
+    T pop();
+    void push(T e);
+    int size();
+    boolean isEmpty();
+}
+class MyIntStack<T> implements AbstractStack<T>{
+	private List<T> elements = new ArrayList<>(); 
+	
+	int topIndex;
+	
+	@Override
+	public T pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void push(T e) {
+		elements.add(e);
+	}
+
+	@Override
+	public int size() {
+		return elements.size();
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return elements.isEmpty();
+	}
+	
+}
+
+class LinkedList<T>{
+	T data;
+	int index;
+	LinkedList<T> next;
+	
+	LinkedList(){
+		
+	}
+	
+	void add(T data) {
+		this.data = data;
+		
+	}
+
+	public T getData() {
+		return data;
+	}
+
+	public LinkedList<T> getNext() {
+		return next;
+	}
+}

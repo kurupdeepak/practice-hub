@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.model;
+
+public class PointCard {
+
+	public PointCard() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

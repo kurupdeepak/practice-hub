@@ -1,0 +1,96 @@
+package test;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    	
+    }
+    
+    
+}
+
+/* Define your class here */
+
+class LocalStack<T> {
+	Object [] elements = new Object[10];
+	
+	int top = -1;
+	
+	void push(T o) {
+		if(++top > elements.length)
+			throw new StackFullException("Stack is full " + top);
+		elements[top] = o;
+	}
+	
+	T pop() {
+		if(top < 0)
+			throw new StackEmptyException("Stack is empty" + top);
+		elements[top--];
+	}
+	
+	int size() {
+		return top;
+	}
+	
+	boolean isEmpty() {
+		return top < 0 ;
+	}
+}
+
+class StackFullException extends RuntimeException{
+
+	public StackFullException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFullException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFullException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFullException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFullException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+
+class StackEmptyException extends RuntimeException{
+
+	public StackEmptyException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackEmptyException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

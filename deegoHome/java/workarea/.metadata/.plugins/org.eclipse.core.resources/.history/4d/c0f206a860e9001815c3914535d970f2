@@ -1,0 +1,11 @@
+package com.kurup.loyalityapp.model;
+
+public class PointCard {
+	int cardNumber;
+	
+	Customer customer;
+	
+	long points;
+
+	
+}

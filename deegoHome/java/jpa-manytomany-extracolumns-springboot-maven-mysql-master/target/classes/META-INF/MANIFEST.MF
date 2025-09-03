@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: JPA Many-To-Many with Extra Columns Example
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Deepak
+Implementation-Vendor-Id: com.hellokoding
+Build-Jdk: 1.8.0_191
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

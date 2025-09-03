@@ -1,0 +1,19 @@
+package test;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+/* Define your class here */
+
+class LocalStack<T> {
+	Object data;
+}

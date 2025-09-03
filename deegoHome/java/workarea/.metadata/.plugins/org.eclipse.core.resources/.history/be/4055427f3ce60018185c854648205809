@@ -1,0 +1,17 @@
+package ca.homedepot.customerreview.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+
+/**
+ * @author Weichen Zhou
+ */
+@ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY)
+public class RatingNotValidException extends RuntimeException
+{
+	public RatingNotValidException(Long userId)
+	{
+		super("User " + userId + " not found!");
+	}
+}

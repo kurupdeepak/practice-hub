@@ -1,0 +1,33 @@
+package com.kurup.loyalityapp.model;
+
+import java.util.Set;
+
+public class UserModel {
+	
+	private int userId;
+	
+	private String name;
+	
+	Set<PointCardModel> cards;
+	
+	public UserModel() {
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Set<PointCardModel> getCards() {
+		return cards;
+	}
+
+	public void setCards(Set<PointCardModel> cards) {
+		this.cards = cards;
+	}
+	
+}

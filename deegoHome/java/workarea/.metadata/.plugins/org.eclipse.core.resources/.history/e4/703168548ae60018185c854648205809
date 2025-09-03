@@ -1,0 +1,55 @@
+package ca.homedepot.customerreview;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.RequestBuilder;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.client.RestTemplate;
+
+import ca.homedepot.customerreview.model.CustomerReviewModel;
+
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+public class CustomerReviewTest {
+
+	@Autowired 
+	MockMvc mockMvc;
+	
+//	@Test
+	public void testGetReviews() throws Exception {
+		
+//		Mockito.when(customerReviewService.getReviewsForProduct(Mockito.any())).thenReturn();
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
+				"/products/1/reviews/1/5").accept(
+				MediaType.APPLICATION_JSON);
+
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+
+		System.out.println(result.getResponse());
+		String expected = "{}";
+		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
+	}
+
+	@Test
+	public void testCreateProduct() {
+		RestTemplate restTemplate = new RestTemplate();
+		CustomerReviewModel t = new CustomerReviewModel();
+		t.setProduct(null);
+		t.setUser(null);
+		t.setHeadline("Headline");
+		t.setId(1L);
+		t.setRating(2.0);
+		t.setComment("Its a great book");
+		ResponseEntity<CustomerReviewModel> cm = restTemplate.postForEntity("http://localhost:8080/v1/products/1/users/1/reviews/", t,CustomerReviewModel.class);
+		System.out.println(cm.getBody());
+		Assert.assertTrue(true);
+	}
+
+	
+}

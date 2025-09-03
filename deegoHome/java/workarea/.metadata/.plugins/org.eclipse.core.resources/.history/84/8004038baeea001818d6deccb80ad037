@@ -1,0 +1,19 @@
+package com.kurup.loyalityapp.util;
+
+import com.google.common.base.Preconditions;
+import com.kurup.loyalityapp.services.PointCardNumberGenerator;
+
+public class ServiceUtil {
+	public static void validateParameterNotNull(Object parameter, String nullMessage) {
+		Preconditions.checkArgument(parameter != null, nullMessage);
+	}
+
+	public static void isValidCardNumber(String cardNumber,String invalidNumberMessage) {
+		validateParameterNotNull(cardNumber, "Card Number is null");
+		Preconditions.checkArgument(cardNumber.matches(""), nullMessage);		
+	}
+	
+	private boolean checkCardLength(String cardNumber) {
+		return (cardNumber.length() < PointCardNumberGenerator.MIN_CARD_NUMBER_LENGTH) || 	cardNumber.contains("[a-zA-Z]+");
+	}
+}

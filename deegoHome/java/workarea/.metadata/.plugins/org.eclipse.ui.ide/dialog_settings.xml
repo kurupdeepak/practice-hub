@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="828" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="480" key="DIALOG_HEIGHT"/>
+		<item value="546" key="DIALOG_X_ORIGIN"/>
+		<item value="190" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="534" key="DIALOG_X_ORIGIN"/>
+		<item value="209" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="FilterByLocation"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/com.practice.springboot.web/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/com.practice.springboot.web/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/simplejpa/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/jpa/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/jpa/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/simplejpa/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/review/service/ReviewService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/review/repository/ReviewRepository.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/test/java/com/test/application/CustomerReviewTest.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/customer/model/Customer.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/product/model/Product.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/review/model/CustomerProductReview.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/review/ApplicationError.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/java/com/test/application/review/CustomerReviewExceptionHandler.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/exception/RatingNotValidException.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/model/LanguageModel.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/Application.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/service/impl/DefaultCustomerReviewService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/model/ProductModel.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/resources/data.sql&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/controller/CustomerReviewController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/dao/CustomerReviewDao.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/model/UserModel.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/java/com/kurup/loyalityapp/controller/LoyalityAppController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/src/main/java/ca/homedepot/customerreview/service/CustomerReviewService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/java/com/kurup/loyalityapp/util/ServiceUtil.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customerreviewserver/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/java/com/kurup/loyalityapp/services/PointCardNumberGenerator.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/customer-review-main/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/java/com/kurup/loyalityapp/model/UserModel.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/java/com/kurup/loyalityapp/model/PointCardModel.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/loyalityapp/src/main/resources/application.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="671" key="DIALOG_X_ORIGIN"/>
+			<item value="188" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="875" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="711" key="DIALOG_HEIGHT"/>
+		<item value="534" key="DIALOG_X_ORIGIN"/>
+		<item value="47" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

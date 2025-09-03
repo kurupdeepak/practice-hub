@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp.repository;
+
+public class StoreRepository {
+
+	public StoreRepository() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

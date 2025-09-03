@@ -1,0 +1,15 @@
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\PracticeCustomerReviewApplication.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\dao\impl\CustomerReviewDAOImpl.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\InvalidRatingException.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\product\dao\ProductDAO.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\DefaultCustomerReviewServiceImpl.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\CustomerReviewConstants.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\product\model\Product.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\model\CustomerReview.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\dao\impl\LanguageDAOImpl.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\ReviewException.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\dao\CustomerReviewDAO.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\product\dao\impl\ProductDAOImpl.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\dao\LanguageDAO.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\CustomerReviewService.java
+C:\git-repos\deego_home\java\workarea\practice-customer-review\src\main\java\com\test\application\customerreview\MessageNotAllowedException.java

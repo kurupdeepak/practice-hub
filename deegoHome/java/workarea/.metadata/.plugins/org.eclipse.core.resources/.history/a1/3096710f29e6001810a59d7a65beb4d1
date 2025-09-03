@@ -1,0 +1,83 @@
+package com.test.application.review.service;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import com.test.application.language.model.Language;
+import com.test.application.language.repository.LanguageRepository;
+import com.test.application.review.CustomerReviewConstants;
+import com.test.application.review.InvalidLanguageException;
+import com.test.application.review.InvalidRatingException;
+import com.test.application.review.CreateReviewFailedException;
+import com.test.application.review.model.CustomerProductReview;
+import com.test.application.review.repository.CustomerProductReviewRepository;
+import com.test.application.review.repository.ReviewRepository;
+
+@Service
+public class ReviewServiceImpl implements ReviewService {
+	
+	@Autowired 
+	ReviewRepository reviewRepository;
+
+	@Autowired 
+	CustomerProductReviewRepository customerProductReviewRepository;
+
+	@Autowired 
+	LanguageRepository languageRepository;
+
+	/* (non-Javadoc)
+	 * @see com.test.application.review.service.IReviewService#addCustomerReview(com.test.application.review.model.CustomerProductReview)
+	 */
+	@Override
+	public boolean addCustomerReview(CustomerProductReview review) throws CreateReviewFailedException {
+		if (isValidReview(review)) {
+			review  = reviewRepository.save(review);
+			return true;
+		}
+		return false;
+	}
+
+	private boolean isValidReview(CustomerProductReview review) throws CreateReviewFailedException {
+		if(StringUtils.isEmpty(review.getComments()) || review.getCustomer() == null || review.getProduct() == null)
+		if (!checkForValidLanguage(review))
+			throw new InvalidLanguageException("Message contains invalid language");
+		if (review.getRating() < CustomerReviewConstants.MIN_RANGE.getValue())
+			throw new InvalidRatingException("Invalid rating : < 0");
+		return true;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.test.application.review.service.IReviewService#findProductsWithRatingInRange(int, int, int)
+	 */
+	@Override
+	public List<CustomerProductReview> findProductsWithRatingInRange(int productId,int min, int max) throws CreateReviewFailedException {
+		if(min < CustomerReviewConstants.MIN_RANGE.getValue() || max > CustomerReviewConstants.MAX_RANGE.getValue())
+			throw new CreateReviewFailedException("Invalid Range provided " + min + "," + max);
+		return reviewRepository.findAllByProductId(productId, min, max);
+	}
+	
+	private boolean checkForValidLanguage(CustomerProductReview review) throws CreateReviewFailedException {
+		if(StringUtils.isEmpty(review.getComments()))
+			return true;
+		
+		Iterable<Language> words = languageRepository.findAll();
+		
+		if(words == null)
+			return true;
+		
+		Iterator<Language> wordsIter = words.iterator();
+		while(wordsIter.hasNext())
+		{
+			String word = wordsIter.next().getWord();
+			
+			if(review.getComments().toLowerCase().contains(word.toLowerCase()))
+				return false;
+		}
+		return true;
+	}
+
+}

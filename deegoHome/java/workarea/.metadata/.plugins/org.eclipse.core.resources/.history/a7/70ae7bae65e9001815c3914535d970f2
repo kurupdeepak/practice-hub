@@ -1,0 +1,7 @@
+package com.kurup.loyalityapp.services;
+
+public enum CardStatus{
+	ACTIVE,
+	CANCELLED,
+	SUSPENDED
+}

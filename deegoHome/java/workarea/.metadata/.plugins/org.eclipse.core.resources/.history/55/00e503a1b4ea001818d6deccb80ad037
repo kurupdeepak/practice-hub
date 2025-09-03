@@ -1,0 +1,9 @@
+package com.kurup.loyalityapp;
+
+public class SwaggerConfig {
+
+	public SwaggerConfig() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

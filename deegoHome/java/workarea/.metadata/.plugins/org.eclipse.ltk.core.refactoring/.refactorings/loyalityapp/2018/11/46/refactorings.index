@@ -1,0 +1,26 @@
+1542345291255	Rename package 'com.kurup.loyalitypoints'
+1542345322727	Rename type 'CustomerReviewMain1ApplicationTests'
+1542345340916	Rename type 'CustomerReviewMain1Application'
+1542345415256	Rename type 'WelcomeController'
+1542345956063	Rename type 'Points'
+1542346121982	Delete element
+1542346648962	Rename type 'Customer'
+1542346818595	Rename method 'showPoints'
+1542348416136	Rename method 'getStatus'
+1542435416034	Rename type 'PointCard'
+1542435426566	Rename type 'User'
+1542473503477	Rename type 'CustomerRepository'
+1542473758136	Rename field 'customer'
+1542474907980	Delete element
+1542476447373	Rename field 'customerId'
+1542478924818	Rename method 'getPoints'
+1542481880859	Rename local variable 'newPoints'
+1542482482472	Delete element
+1542483234571	Rename package 'com.kurup.loyalitypoints'
+1542486206340	Rename type 'LoyalityAppService'
+1542486216181	Rename field 'loyalityAppService'
+1542489170645	Rename field 'CARD_NUMBER_LENGTH'
+1542491390500	Rename method 'checkCard'
+1542491396815	Rename method 'validCard'
+1542492285333	Delete element
+1542492456903	Rename resource 'SwaggerConfig.java.1'

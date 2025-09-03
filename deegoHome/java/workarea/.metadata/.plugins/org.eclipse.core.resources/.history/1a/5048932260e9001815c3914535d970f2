@@ -1,0 +1,13 @@
+package com.kurup.loyalityapp.model;
+
+public class CustomerPoints {
+	
+	int customerId;
+	
+	int points;
+
+	public CustomerPoints() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

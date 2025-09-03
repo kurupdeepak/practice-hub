@@ -1,0 +1,25 @@
+package test;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Use your class here */
+    }
+}
+
+/* Define your class here */
+interface AbsractStack<T>{
+    T pop();
+    void push(T e);
+    T size();
+    boolean isEmpty();
+}
+class MyIntStack implements AbstractStack<T>{
+    T [] elements ;
+    MyStack(int size){
+        elements = new int[size];
+    }    
+    int pop();
+    void push(int e);
+    int size();
+    boolean isEmpty();
+}

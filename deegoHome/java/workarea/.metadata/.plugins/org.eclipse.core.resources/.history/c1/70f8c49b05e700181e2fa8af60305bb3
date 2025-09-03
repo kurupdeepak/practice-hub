@@ -1,0 +1,113 @@
+package test;
+
+import java.util.Arrays;
+import java.util.Stack;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+    	Stack stack;
+        /* Use your class here */
+    	StackArrayBased sab = new StackArrayBased(10);
+    	testEmptyPop(sab);
+    	print(sab);
+    	testEmptyStack(sab);
+    	print(sab);
+    }
+    
+    static void testEmptyPop(StackArrayBased sab) {
+    	print(sab);
+    	sab.pop();
+    }
+    
+    static void testEmptyStack(StackArrayBased sab) {
+    	print(sab);
+    	System.out.println("IsEmpty()" + sab.isEmpty());
+    }
+    
+    static void testPush2(StackArrayBased sab) {
+    	sab.push(1);
+    	sab.push(2);
+    }
+    
+    static void print(StackArrayBased sab ) {
+    	System.out.println("Arr = " + Arrays.toString(sab.get()) + " , top = "+ sab.top);
+    }
+}
+
+
+
+/* Define your class here */
+interface AbstractStack{
+    int pop();
+    void push(int e);
+    int size();
+    boolean isEmpty();
+}
+
+class StackArrayBased implements AbstractStack{
+    int [] elements ;
+    
+    int top;
+    
+    StackArrayBased(int initialCapacity){
+    	elements = new int[initialCapacity];
+    }
+    
+	@Override
+	public int pop() {
+		if(top < 0)
+			throw new StackOperationFailedException("Stack is empty");
+		return elements[top--];
+	}
+
+	@Override
+	public void push(int e) {
+		if(top >= elements.length)
+			throw new StackOperationFailedException("Stack is full");
+		elements[top++] = e;
+	}
+
+	@Override
+	public int size() {
+		return top;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return top == 0;
+	}
+    
+	int [] get() {
+		return elements;
+	}
+}
+
+class StackOperationFailedException extends RuntimeException{
+
+	public StackOperationFailedException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackOperationFailedException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
