@@ -1,0 +1,70 @@
+{
+  "bg-entries": [
+    {
+      "id": 1,
+      "userid": "1",
+      "value": 12,
+      "createdDate": 1600255571980,
+      "riskLevel": null,
+      "isMeal": null,
+      "beforeMeal": null,
+      "afterMeal": null,
+      "mealTime": null,
+      "updatedTime": null,
+      "insulin": null,
+      "carbs": null,
+      "calories": null,
+      "food": null,
+      "notes": null,
+      "correction": null
+    },
+    {
+      "id": 2,
+      "userid": "1",
+      "value": 10.1,
+      "createdDate": 1600258643709,
+      "riskLevel": null,
+      "isMeal": null,
+      "beforeMeal": null,
+      "afterMeal": null,
+      "mealTime": null,
+      "updatedTime": null,
+      "insulin": null,
+      "carbs": null,
+      "calories": null,
+      "food": null,
+      "notes": null,
+      "correction": null
+    },
+    {
+      "id": 3,
+      "userid": "1",
+      "value": 12,
+      "createdDate": 1600290549558,
+      "riskLevel": null,
+      "isMeal": null,
+      "beforeMeal": null,
+      "afterMeal": null,
+      "mealTime": null,
+      "updatedTime": null,
+      "insulin": null,
+      "carbs": null,
+      "calories": null,
+      "food": null,
+      "notes": null,
+      "correction": null
+    }
+  ],
+  "bp-entries": [],
+  "users": [
+    {
+      "id": "1",
+      "userid": "1",
+      "firstName": "Jon",
+      "lastName": "Tesh",
+      "phone": 6477568989,
+      "email": "jon.tesh.dummy@gmail.com",
+      "username": "jon.tesh.dummy@gmail.com"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.page-nav-item a{
+  color:#4D4365
+}
+
+.page-nav-item .page-nav-link, a:active{
+  color:#a399b9
+}
+
+.page-nav-item .page-nav-link:hover{
+  background-color:#E5E5E8;
+}

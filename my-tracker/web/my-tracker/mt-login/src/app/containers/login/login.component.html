@@ -1,0 +1,54 @@
+<div class="mr-auto mt-2">
+  <div class="card rounded" style="width:30rem">
+      <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        <div *ngIf="msgAvailable" class="row">
+          <div class="col">
+            <div [class]="alertClass" class="p-1">
+              <h6>{{message.message}}</h6>
+              <p *ngIf="message.isError" class="m-1">{{message.status}}-{{message.statusInfo}}</p>
+            </div>
+          </div>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="row form-group">
+            <div class="col-sm-10 col-md-9">
+              <label class="form-label" for="username">Username</label>
+              <input formControlName="username" class="form-control" type="text" placeholder="username@email.com">
+              <div
+              *ngIf="username.errors?.required && (username.dirty || username.touched)"
+              class="text-danger small">
+                Username required
+              </div>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-10 col-md-9">
+              <label class="form-label" for="password">Password</label>
+              <input formControlName="password" class="form-control" type="password" placeholder="*********">
+              <div
+              *ngIf="password.errors?.required && (password.dirty || password.touched)"
+              class="text-danger small">
+                Password required
+              </div>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-10 col-md-9">
+              <div class="form-check form-check-inline">
+                <input formControlName="rememberMe" class="form-check-input" type="checkbox">
+                <label class="form-check-label" for="rememberMe">Remember Me?</label>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center ">
+            <div class="col">
+              <button class="btn btn-secondary mx-2" type="submit" [disabled]="!loginForm.valid">Login</button>
+              <button class="btn btn-secondary" routerLink="/register">Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>

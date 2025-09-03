@@ -1,0 +1,85 @@
+<div class="row mb-2">
+  <div class="col-8">
+    <div class="card card-body rounded ">
+      <h5 class="card-title">Blood Glucose Reading</h5>
+      <p class="card-category" *ngIf="!isViewMode">{{title|date}} <small>({{title|date:"hh:mm a"|lowercase}})</small></p>
+      <p class="card-category" *ngIf="isViewMode">{{created_date.value|date}} <small>({{created_date.value|date:"hh:mm a"|lowercase}})</small></p>
+        <form [formGroup]="bgForm" (ngSubmit)="submit()">
+          <input formControlName="id" type="hidden">
+          <input formControlName="userid" type="hidden">
+          <input formControlName="createdDate" type="hidden">
+          <div class="row">
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="value">Blood Glucose(mmol/L)</label>
+              <input formControlName="value" class="form-control" type="number" placeholder="0">
+              <div
+              *ngIf="bg_value.invalid && (bg_value.dirty || bg_value.touched)"
+              class="text-danger small">
+              Provide a value for the glucose level
+            </div>
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <div class="form-check form-check-inline align-middle">
+                <input formControlName="isMeal" class="form-check-input" type="checkbox" (click)="isMealtime = !isMealtime">
+                <label class="form-check-label" for="inlinecheckbox1">More?</label>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="isMealtime">
+          <div class="row">
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="mealTime">Meal Time</label>
+              <input formControlName="mealTime" class="form-control" type="text" placeholder="00:00 am">
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <div class="form-check form-check-inline">
+                <input formControlName="beforeMeal" class="form-check-input" type="checkbox" >
+                <label class="form-check-label" for="inlinecheckbox1">Before?</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input formControlName="afterMeal" class="form-check-input" type="checkbox">
+                <label class="form-check-label" for="inlinecheckbox1">After?</label>
+              </div>
+             </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="insulin">Insulin(Units)</label>
+              <input formControlName="insulin" class="form-control" type="number" placeholder="0">
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="correction">Correction(Units)</label>
+              <input formControlName="correction" class="form-control" type="number" placeholder="0">
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="carbs">Carbs.(g)</label>
+               <input formControlName="carbs" class="form-control" type="number" placeholder="0">
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <label class="form-label" for="calories">Calories(kcal)</label>
+              <input formControlName="calories" class="form-control" type="number" placeholder="0">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 col-md-10">
+              <label class="form-label" for="food">Food Notes</label>
+                <textarea formControlName="food" class="form-control" rows=3 cols="50" placeholder="food"></textarea>
+            </div>
+            <div class="col-sm-10 col-md-10">
+              <label class="form-label" for="notes">Notes</label>
+                <textarea formControlName="notes" class="form-control" rows=3 cols="50" placeholder="notes"></textarea>
+            </div>
+          </div>
+        </div>
+          <div class="stats mt-2">
+            <button type="submit" class="btn btn-secondary mx-2" [disabled]="!bgForm.valid">Save</button>
+            <button class="btn btn-secondary" routerLink="/dbm">Back</button>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div class="col-4">
+    <mt-dbm-bglist></mt-dbm-bglist>
+  </div>
+</div>

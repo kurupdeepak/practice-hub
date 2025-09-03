@@ -1,0 +1,15 @@
+ ng g m modules/common
+ ng add @ng-bootstrap/ng-bootstrap
+ ng add @fortawesome/angular-fontawesome
+ npm install ng2-charts
+ npm install chart.js
+ ##--host 0.0.0.0
+ ##angular.json - add proxy-conf.json
+ ##mock folder setup
+ json-server --watch mockdb.json 
+
+ NOTES 
+ ChartsModule to be removed from common not in use
+ Had to recreate/copy all the common stuff across including guard logic, auth service logic,common modules etc.
+ environment as well., proxy conf, angular.json changes.
+ then add ngbootstrap and ng-fortawesome

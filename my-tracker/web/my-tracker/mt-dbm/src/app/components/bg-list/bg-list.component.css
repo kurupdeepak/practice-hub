@@ -1,0 +1,30 @@
+.panel{
+  margin:2px;
+  padding:5px;
+}
+
+.panel p{
+  padding:0;
+}
+
+.panel fa-icon{
+  float: right;
+  margin:0 2px;
+  color: black;
+}
+
+.hr-marker-success,.hr-marker-warning,.hr-marker-danger{
+  height:2px;
+  padding:0;
+}
+
+.hr-marker-warning{
+  background-color: orange;
+}
+
+.hr-marker-success{
+  background-color: green;
+}
+.hr-marker-danger{
+  background-color: red;
+}

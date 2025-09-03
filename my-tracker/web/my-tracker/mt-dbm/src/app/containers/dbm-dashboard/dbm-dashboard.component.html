@@ -1,0 +1,35 @@
+<div class="row mb-2">
+  <div class="col-8">
+    <div class="row">
+      <div class="col">
+        <div *ngIf="msgAvailable" class="row m-2">
+          <div class="col-10 d-flex justify-content-center p-0">
+            <div [class]="alert_class" class="p-1">
+              <h6>{{message.message}}</h6>
+              <p *ngIf="message.isError" class="m-1">{{message.status}}-{{message.statusInfo}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card-body rounded ">
+          <h5 class="card-title">Glucose Level</h5>
+          <p class="card-category">24 Hours</p>
+          <mt-dbm-bgchart></mt-dbm-bgchart>
+          <div class="stats"><i class="fa fa-history"></i> <small>Updated 3 minutes ago</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+          <div class="card card-body rounded ">
+            <h5 class="card-title">Blood Pressure</h5>
+            <p class="card-category">24 Hours</p>
+              <mt-dbm-bpchart></mt-dbm-bpchart>
+            <div class="stats"><i class="fa fa-history"></i> <small>Updated 3 minutes ago</small></div>
+        </div>
+          </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <mt-dbm-bglist></mt-dbm-bglist>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<nav class="navbar mt-navbar navbar-expand-lg">
+  <a class="navbar-brand mb-1" href="#">mytracker</a>
+  <button
+    class="navbar-toggler text-white navbar-dark"
+    type="button"
+    (click)="isCollapsed = !isCollapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <!--Top Menu Items-->
+    <div [ngbCollapse]="isCollapsed"  *ngIf="isAuthenticated" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto" *ngIf="!isTogglerOn">
+        <li class="nav-item" *ngFor="let menu of menus$" >
+          <a class="nav-link" [routerLink]="menu.href" routerLinkActive="active">{{menu.title | uppercase}}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto" *ngIf="isTogglerOn">
+        <li class="nav-item" *ngFor="let menu of menus$" >
+          <h6><a class="nav-link" [routerLink]="menu.href">{{menu.title}}</a></h6>
+        </li>
+        <li class="nav-item"  *ngIf="isTogglerOn">
+          <a class="nav-link"><h6>Settings</h6></a>
+        </li>
+        <li class="nav-item"  *ngIf="isTogglerOn">
+          <a class="nav-link"><h6>Logout</h6></a>
+        </li>
+      </ul>
+
+    </div>
+<!--User settings -->
+<span class="navbar-text p-0" *ngIf="!isTogglerOn">
+  <div ngbDropdown class="dropdown">
+    <button ngbDropdownToggle class="btn" type="button" id="userSettings">
+      <fa-icon [icon]="faUser"></fa-icon>
+    </button>
+    <div ngbDropdownMenu  aria-labelledby="userSettings" class="dropdown-menu dropdown-menu-right">
+      <a ngbDropdownItem href="#">Settings</a>
+      <a ngbDropdownItem href="#">Logout</a>
+    </div>
+  </div>
+</span>
+
+</nav>

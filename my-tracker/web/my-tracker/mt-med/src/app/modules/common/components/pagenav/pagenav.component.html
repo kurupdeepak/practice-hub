@@ -1,0 +1,5 @@
+<ul ngbNav class="page-nav">
+  <li [ngbNavItem]="menu.id" *ngFor="let menu of appMenus$" class="page-nav-item">
+    <a class="page-nav-link" ngbNavLink routerLink="{{menu.href}}">{{ menu.title }}</a>
+  </li>
+</ul>

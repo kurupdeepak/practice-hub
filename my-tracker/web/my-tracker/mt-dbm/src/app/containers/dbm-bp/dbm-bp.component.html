@@ -1,0 +1,45 @@
+<div class="row mb-2">
+  <div class="col-8">
+    <div class="card card-body rounded ">
+      <h5 class="card-title">Blood Pressure Reading</h5>
+      <p class="card-category">{{today|date}} <small>({{today|date:"hh:mm a"|lowercase}})</small></p>
+        <form [formGroup]="bpmForm" (ngSubmit)="submit()">
+          <input formControlName="id" type="hidden">
+          <input formControlName="userid" type="hidden">
+          <input formControlName="createdDate" type="hidden">
+          <input formControlName="createdTime" type="hidden">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 m-2">
+              <label class="form-label" for="systolic">Systolic</label>
+              <input formControlName="systolic" class="form-control" type="text" placeholder="120">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-8 m-2">
+              <label class="form-label" for="distolic">Distolic</label>
+              <input formControlName="distolic" class="form-control" type="text" placeholder="80">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-8 m-2">
+              <label class="form-label" for="pulse">Pulse</label>
+              <input formControlName="pulse" class="form-control" type="text" placeholder="80">
+            </div>
+          </div>
+          <div class="row">
+             <div class="col-sm-10 col-md-10 m-2">
+              <label class="form-label" for="pulse">Notes</label>
+              <textarea formControlName="notes" class="form-control" rows=3 cols="50" placeholder="notes"></textarea>
+            </div>
+          </div>
+          <div class="stats">
+            <button class="btn btn-secondary mx-2" [disabled]="!bpmForm.valid" type="submit">Save</button>
+            <button class="btn btn-secondary" routerLink="/dbm">Back</button>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div class="col-4">
+    <mt-dbm-bglist></mt-dbm-bglist>
+  </div>
+</div>

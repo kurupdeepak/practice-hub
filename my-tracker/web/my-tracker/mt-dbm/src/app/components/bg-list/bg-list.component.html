@@ -1,0 +1,11 @@
+<h5 class="card-title">Latest Glucose Entries</h5>
+<div class="row">
+  <div class="col-md-4 px-1" *ngFor="let e of dailyLogEntries">
+    <div class="card card-body panel">
+      <p class="card-title">{{e.value}} mmol/l</p>
+      <hr ngClass="hr-{{e.value | dbmparser:'risk_marker'}}">
+      <p class="card-subtitle">{{e.createdDate |date}}</p>
+      <p><small>{{e.createdDate |date:'h:mm a'|lowercase}}</small><a [routerLink]="['/dbm/view/bg',e.id]"><fa-icon class="text-secondary" [icon]="faInfoIcon"></fa-icon></a></p>
+    </div>
+  </div>
+</div>
